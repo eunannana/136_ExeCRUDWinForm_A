@@ -16,5 +16,10 @@ namespace ExeCRUDWinForm_136_A
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
