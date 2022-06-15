@@ -57,15 +57,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iLibraryDataSet = new ExeCRUDWinForm_136_A.iLibraryDataSet();
+            this.librarianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.librarianTableAdapter = new ExeCRUDWinForm_136_A.iLibraryDataSetTableAdapters.LibrarianTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iLibraryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.librarianBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -203,6 +209,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianGender", true));
             this.radioButton2.Location = new System.Drawing.Point(205, 168);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(37, 20);
@@ -214,6 +221,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianGender", true));
             this.radioButton1.Location = new System.Drawing.Point(138, 168);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(35, 20);
@@ -224,6 +232,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianAddress", true));
             this.textBox5.Location = new System.Drawing.Point(138, 308);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(198, 22);
@@ -231,6 +240,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianBirthdate", true));
             this.textBox4.Location = new System.Drawing.Point(138, 258);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(198, 22);
@@ -238,6 +248,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianPhone", true));
             this.textBox3.Location = new System.Drawing.Point(138, 210);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(198, 22);
@@ -245,6 +256,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianName", true));
             this.textBox2.Location = new System.Drawing.Point(138, 120);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(198, 22);
@@ -252,6 +264,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.librarianBindingSource, "librarianID", true));
             this.textBox1.Location = new System.Drawing.Point(138, 66);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(198, 22);
@@ -322,6 +335,20 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // iLibraryDataSet
+            // 
+            this.iLibraryDataSet.DataSetName = "iLibraryDataSet";
+            this.iLibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // librarianBindingSource
+            // 
+            this.librarianBindingSource.DataMember = "Librarian";
+            this.librarianBindingSource.DataSource = this.iLibraryDataSet;
+            // 
+            // librarianTableAdapter
+            // 
+            this.librarianTableAdapter.ClearBeforeFill = true;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,12 +359,15 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "Form4";
             this.Text = "iLibrary - Librarian";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iLibraryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.librarianBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +402,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private iLibraryDataSet iLibraryDataSet;
+        private System.Windows.Forms.BindingSource librarianBindingSource;
+        private iLibraryDataSetTableAdapters.LibrarianTableAdapter librarianTableAdapter;
     }
 }

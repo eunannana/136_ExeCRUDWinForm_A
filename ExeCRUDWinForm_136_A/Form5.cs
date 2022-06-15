@@ -22,5 +22,12 @@ namespace ExeCRUDWinForm_136_A
             new Form1().Show();
             this.Hide();
         }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'iLibraryDataSet.Reservation' table. You can move, or remove it, as needed.
+            this.reservationTableAdapter.Fill(this.iLibraryDataSet.Reservation);
+
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace ExeCRUDWinForm_136_A
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iLibraryDataSet.Book' table. You can move, or remove it, as needed.
+            this.bookTableAdapter.Fill(this.iLibraryDataSet.Book);
 
         }
 
