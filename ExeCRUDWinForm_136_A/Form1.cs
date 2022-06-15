@@ -21,5 +21,33 @@ namespace ExeCRUDWinForm_136_A
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form2().Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Form3().Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new Form4().Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new Form5().Show();
+            this.Hide();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

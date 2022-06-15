@@ -16,5 +16,11 @@ namespace ExeCRUDWinForm_136_A
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
+            this.Hide();
+        }
     }
 }
