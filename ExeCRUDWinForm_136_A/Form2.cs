@@ -16,5 +16,10 @@ namespace ExeCRUDWinForm_136_A
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
